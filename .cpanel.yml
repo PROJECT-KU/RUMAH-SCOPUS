@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u1272738/public_html/
+    - /bin/cp application/config/routes.php $DEPLOYPATH
+    - /bin/cp theme/css/style.css $DEPLOYPATH
+    - /bin/cp -R img $DEPLOYPATH
