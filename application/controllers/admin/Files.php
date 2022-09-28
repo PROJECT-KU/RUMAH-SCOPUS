@@ -19,11 +19,12 @@ class Files extends CI_Controller
 	{
 
 		$x['data'] = $this->m_files->get_all_files();
+		$x['title'] = 'Rumah Scopus | File Download';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_files', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function download()

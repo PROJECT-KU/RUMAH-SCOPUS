@@ -18,31 +18,34 @@ class Tulisan extends CI_Controller
 	function index()
 	{
 		$x['data'] = $this->m_tulisan->get_all_tulisan();
+		$x['title'] = 'Rumah Scopus | Artikel';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_tulisan', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 	function add_tulisan()
 	{
 		$x['kat'] = $this->m_kategori->get_all_kategori();
+		$x['title'] = 'Rumah Scopus | Tambah Artikel';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_add_tulisan', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 	function get_edit()
 	{
 		$kode = $this->uri->segment(4);
 		$x['data'] = $this->m_tulisan->get_tulisan_by_kode($kode);
 		$x['kat'] = $this->m_kategori->get_all_kategori();
+		$x['title'] = 'Rumah Scopus | Update Artikel';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_edit_tulisan', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 	function simpan_tulisan()
 	{

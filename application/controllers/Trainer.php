@@ -45,6 +45,7 @@ class Trainer extends CI_Controller
 		$this->pagination->initialize($config);
 		$x['page'] = $this->pagination->create_links();
 		$x['data'] = $this->m_guru->guru_perpage($offset, $limit);
+		$x['title'] = 'Rumah Scopus | Trainer';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_guru', $x);

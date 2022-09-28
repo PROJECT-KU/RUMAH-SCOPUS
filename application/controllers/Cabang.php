@@ -44,6 +44,7 @@ class Cabang extends CI_Controller
 		$this->pagination->initialize($config);
 		$x['page'] = $this->pagination->create_links();
 		$x['data'] = $this->m_cabang->siswa_perpage($offset, $limit);
+		$x['title'] = 'Rumah Scopus | Cabang';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_cabang', $x);

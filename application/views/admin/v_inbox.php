@@ -6,15 +6,18 @@ $jum_comment = $query2->num_rows();
 $jum_pesan = $query->num_rows();
 ?>
 
+<!--============================= TITLE =============================-->
+<head>
+<title><?php echo $title; ?></title>
+</head>
+<!--============================= END =============================-->
 
+<!--============================= CONTENT =============================-->
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-
-    
-
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
+    
+    <!--============================= JUDUL PAGE =============================-->
       <section class="content-header">
         <h1>
           Inbox
@@ -25,15 +28,14 @@ $jum_pesan = $query->num_rows();
           <li class="active">Inbox</li>
         </ol>
       </section>
+    <!--============================= END JUDUL PAGE =============================-->
 
-      <!-- Main content -->
+    <!--============================= DATA INBOX =============================-->
       <section class="content">
         <div class="row">
           <div class="col-xs-12">
             <div class="box">
-
               <div class="box">
-                <!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-striped" style="font-size:12px;">
                     <thead>
@@ -55,7 +57,6 @@ $jum_pesan = $query->num_rows();
                         $inbox_email = $i['inbox_email'];
                         $inbox_msg = $i['inbox_pesan'];
                         $tanggal = $i['tanggal'];
-
                       ?>
                         <tr>
                           <td><?php echo $tanggal; ?></td>
@@ -63,364 +64,70 @@ $jum_pesan = $query->num_rows();
                           <td><?php echo $inbox_email; ?></td>
                           <td><?php echo $inbox_msg; ?></td>
                           <td style="text-align:right;">
-                            <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $inbox_id; ?>"><span class="fa fa-trash"></span></a>
+                            <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $inbox_id; ?>"><span style="color: red;" class="fa fa-trash"></span></a>
                           </td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
                   </table>
                 </div>
-                <!-- /.box-body -->
               </div>
-              <!-- /.box -->
             </div>
-            <!-- /.col -->
           </div>
-          <!-- /.row -->
       </section>
-      <!-- /.content -->
+    <!--============================= END DATA INBOX =============================-->
+
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-      </div>
-      <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="#">Rumah Scopus</a> </strong> All rights reserved
-    </footer>
+  
+    <!--============================= DELETE INBOX =============================-->
+      <?php foreach ($data->result_array() as $i) :
+        $inbox_id = $i['inbox_id'];
+        $inbox_nama = $i['inbox_nama'];
+        $inbox_email = $i['inbox_email'];
+        $inbox_msg = $i['inbox_pesan'];
+        $tanggal = $i['tanggal'];
+      ?>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Create the tabs -->
-      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <!-- Home tab content -->
-        <div class="tab-pane" id="control-sidebar-home-tab">
-          <h3 class="control-sidebar-heading">Recent Activity</h3>
-          <ul class="control-sidebar-menu">
-            <li>
-              <a href="javascript:void(0)">
-                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                  <p>Will be 23 on April 24th</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <i class="menu-icon fa fa-user bg-yellow"></i>
-
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                  <p>New phone +1(800)555-1234</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                  <p>nora@example.com</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-                <div class="menu-info">
-                  <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                  <p>Execution time 5 seconds</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <!-- /.control-sidebar-menu -->
-
-          <h3 class="control-sidebar-heading">Tasks Progress</h3>
-          <ul class="control-sidebar-menu">
-            <li>
-              <a href="javascript:void(0)">
-                <h4 class="control-sidebar-subheading">
-                  Custom Template Design
-                  <span class="label label-danger pull-right">70%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <h4 class="control-sidebar-subheading">
-                  Update Resume
-                  <span class="label label-success pull-right">95%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <h4 class="control-sidebar-subheading">
-                  Laravel Integration
-                  <span class="label label-warning pull-right">50%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)">
-                <h4 class="control-sidebar-subheading">
-                  Back End Framework
-                  <span class="label label-primary pull-right">68%</span>
-                </h4>
-
-                <div class="progress progress-xxs">
-                  <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <!-- /.control-sidebar-menu -->
-
-        </div>
-        <!-- /.tab-pane -->
-        <!-- Stats tab content -->
-        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-        <!-- /.tab-pane -->
-        <!-- Settings tab content -->
-        <div class="tab-pane" id="control-sidebar-settings-tab">
-          <form method="post">
-            <h3 class="control-sidebar-heading">General Settings</h3>
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Report panel usage
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-
-              <p>
-                Some information about this general settings option
-              </p>
-            </div>
-            <!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Allow mail redirect
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-
-              <p>
-                Other sets of options are available
-              </p>
-            </div>
-            <!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Expose author name in posts
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-
-              <p>
-                Allow the user to show his name in blog posts
-              </p>
-            </div>
-            <!-- /.form-group -->
-
-            <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Show me as online
-                <input type="checkbox" class="pull-right" checked>
-              </label>
-            </div>
-            <!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Turn off notifications
-                <input type="checkbox" class="pull-right">
-              </label>
-            </div>
-            <!-- /.form-group -->
-
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Delete chat history
-                <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-              </label>
-            </div>
-            <!-- /.form-group -->
-          </form>
-        </div>
-        <!-- /.tab-pane -->
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-  </div>
-  <!-- ./wrapper -->
-
-  <!--Modal Add Pengguna-->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-          <h4 class="modal-title" id="myModalLabel">Add Agenda</h4>
-        </div>
-        <form class="form-horizontal" action="<?php echo base_url() . 'admin/agenda/simpan_agenda' ?>" method="post" enctype="multipart/form-data">
-          <div class="modal-body">
-
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Nama Agenda</label>
-              <div class="col-sm-7">
-                <input type="text" name="xnama_agenda" class="form-control" id="inputUserName" placeholder="Nama Agenda" required>
+        <div class="modal fade" id="ModalHapus<?php echo $inbox_id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+                <h4 class="modal-title" id="myModalLabel">Hapus Agenda</h4>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Deskripsi</label>
-              <div class="col-sm-7">
-                <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required></textarea>
-              </div>
-            </div>
+              <form class="form-horizontal" action="<?php echo base_url() . 'admin/inbox/hapus_inbox' ?>" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                  <input type="hidden" name="kode" value="<?php echo $inbox_id; ?>" />
+                  <p>Apakah Anda yakin mau menghapus data ini?</p>
 
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Mulai</label>
-              <div class="col-sm-7">
-                <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" name="xmulai" class="form-control pull-right" id="datepicker" required>
                 </div>
-              </div>
-              <!-- /.input group -->
-            </div>
-            <!-- /.form group -->
-
-            <!-- Date range -->
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Selesai</label>
-              <div class="col-sm-7">
-                <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" name="xselesai" class="form-control pull-right" id="datepicker2" required>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning btn-flat" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-danger btn-flat" id="simpan">Hapus</button>
                 </div>
-              </div>
-              <!-- /.input group -->
+              </form>
             </div>
-            <!-- /.form group -->
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Tempat</label>
-              <div class="col-sm-7">
-                <input type="text" name="xtempat" class="form-control" id="inputUserName" placeholder="Tempat" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Waktu</label>
-              <div class="col-sm-7">
-                <input type="text" name="xwaktu" class="form-control" id="inputUserName" placeholder="Contoh: 10.30-11.00 WIB" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="inputUserName" class="col-sm-4 control-label">Keterangan</label>
-              <div class="col-sm-7">
-                <textarea class="form-control" name="xketerangan" rows="2" placeholder="Keterangan ..."></textarea>
-              </div>
-            </div>
-
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-
-
-  <?php foreach ($data->result_array() as $i) :
-    $inbox_id = $i['inbox_id'];
-    $inbox_nama = $i['inbox_nama'];
-    $inbox_email = $i['inbox_email'];
-    $inbox_msg = $i['inbox_pesan'];
-    $tanggal = $i['tanggal'];
-  ?>
-    <!--Modal Hapus Pengguna-->
-    <div class="modal fade" id="ModalHapus<?php echo $inbox_id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-            <h4 class="modal-title" id="myModalLabel">Hapus Agenda</h4>
-          </div>
-          <form class="form-horizontal" action="<?php echo base_url() . 'admin/inbox/hapus_inbox' ?>" method="post" enctype="multipart/form-data">
-            <div class="modal-body">
-              <input type="hidden" name="kode" value="<?php echo $inbox_id; ?>" />
-              <p>Apakah Anda yakin mau menghapus data ini?</p>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary btn-flat" id="simpan">Hapus</button>
-            </div>
-          </form>
         </div>
-      </div>
-    </div>
-  <?php endforeach; ?>
+      <?php endforeach; ?>
+    <!--============================= END DELETE INBOX =============================-->
 
+</body>
+<!--============================= END CONTENT =============================-->
 
-
-
-  <!-- jQuery 2.2.3 -->
+<!--============================= JAVA SCRIPT =============================-->
   <script src="<?php echo base_url() . 'assets/plugins/jQuery/jquery-2.2.3.min.js' ?>"></script>
-  <!-- Bootstrap 3.3.6 -->
   <script src="<?php echo base_url() . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
-  <!-- DataTables -->
   <script src="<?php echo base_url() . 'assets/plugins/datatables/jquery.dataTables.min.js' ?>"></script>
   <script src="<?php echo base_url() . 'assets/plugins/datatables/dataTables.bootstrap.min.js' ?>"></script>
-  <!-- SlimScroll -->
   <script src="<?php echo base_url() . 'assets/plugins/slimScroll/jquery.slimscroll.min.js' ?>"></script>
   <script src="<?php echo base_url() . 'assets/plugins/datepicker/bootstrap-datepicker.js' ?>"></script>
   <script src="<?php echo base_url() . 'assets/plugins/timepicker/bootstrap-timepicker.min.js' ?>"></script>
   <script src="<?php echo base_url() . 'assets/plugins/daterangepicker/daterangepicker.js' ?>"></script>
-  <!-- FastClick -->
   <script src="<?php echo base_url() . 'assets/plugins/fastclick/fastclick.js' ?>"></script>
-  <!-- AdminLTE App -->
   <script src="<?php echo base_url() . 'assets/dist/js/app.min.js' ?>"></script>
-  <!-- AdminLTE for demo purposes -->
   <script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
   <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/toast/jquery.toast.min.js' ?>"></script>
-  <!-- page script -->
   <script>
     $(function() {
       $("#example1").DataTable();
@@ -495,6 +202,4 @@ $jum_pesan = $query->num_rows();
   <?php else : ?>
 
   <?php endif; ?>
-</body>
-
-</html>
+<!--============================= END JAVA SCRIPT =============================-->

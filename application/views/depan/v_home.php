@@ -1,4 +1,9 @@
 
+<!--============================= TITLE =============================-->
+<head>
+<title><?php echo $title; ?></title>
+</head>
+<!--============================= END =============================-->
 
 <!--============================= SLIDER =============================-->
 <section>
@@ -249,6 +254,106 @@
 
     </div>
 </section>     
+<!--============================= END =============================-->
+
+<!--============================= AGENDA DENGAN PICT =============================-->
+<section class="our_courses" style="background-color: #F5FAFF; margin-top:-50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" style="position: relative;">
+                <h2>Layanan Kami</h2>
+                <hr size="6px" width="100%" align="left" color="orange" style="margin-top: -15px;">
+            </div>
+        </div>
+        <?php foreach ($agenda->result() as $row):?>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="card courses_box mb-4">
+                    <img style="background-color: rgba(22, 160, 133, 0.1); " src="<?php echo base_url() . 'assets/images/' . $row->agenda_foto ?>"> 
+                        <div class="card-body">
+                            <center>
+                                <h5 class="card-title mt-3" ><b>Webinar Scopus Training</b></h5>
+                            </center>
+                            <hr size="6px" width="50%" align="center" color="orange">
+                            <p style="margin-left:15px;">Pelayanan kegiatan seminar yang dilakukan secara online atau offline yang di lakukan oleh pihak scopus dalam melayani pendampingan jurnal</p>
+                            <center>
+                                <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!%20Saya%20mau%20pesan%20program%20Webinar%20Scopus%20Training." class="btn btn-warning mb-3 mt-3" style="color:white; border-radius:30px; background-color:orange;">
+                                    Pesan Sekarang!
+                                </a>
+                            </center>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="card courses_box mb-4">
+                    <img style="background-color:  rgba(213, 15, 37, 0.1)" src="<?php echo base_url() . 'theme/images/logo/camp.png' ?>"> 
+                        <div class="card-body">
+                            <center>
+                                <h5 class="card-title mt-3" ><b>Scopus Camp</b></h5>
+                            </center>
+                            <hr size="6px" width="50%" align="center" color="orange">
+                            <p style="margin-left:15px;">Memberikan pelatihan penulisan paper yang berjalan selama kurun waktu tertentu. Scopus Camp ini bertempat di scopus pusat yang berada di Turi, Sleman dan cabang Rumah Scopus</p>
+                            <center>
+                                <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!%20Saya%20mau%20pesan%20program%20Scopus%20Camp." class="btn btn-warning mb-3 mt-3" style="color:white; border-radius:30px; background-color:orange;">
+                                    Pesan Sekarang!
+                                </a>
+                            </center>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="card courses_box mb-4"> 
+                    <img style="background-color:  rgba(250, 188, 9, 0.1)" src="<?php echo base_url() . 'theme/images/logo/toga.png' ?>"> 
+                        <div class="card-body">
+                            <center>
+                                <h5 class="card-title mt-3" ><b>Program Nyata Percepatan Guru Besar (PNP GB)</b></h5>
+                            </center>
+                            <hr size="6px" width="50%" align="center" color="orange">
+                            <p style="margin-left:15px;">Memberikan layanan dalam penyusunan paper yang bereputasi internasional yang terindeks Scopus.</p>
+                            <center>
+                                <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!%20Saya%20mau%20pesan%20program%20Pendampingan%20Nyata%20Percepatan%20Guru%20Besar." class="btn btn-warning mb-3 mt-3" style="color:white; border-radius:30px; background-color:orange;">
+                                    Pesan Sekarang!
+                                </a>
+                            </center>
+                        </div>
+                </div>
+            </div>
+
+            <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="card courses_box mb-4">
+                    <img style="background-color: rgba(121, 90, 71, 0.1)" src="<?php echo base_url() . 'theme/images/logo/student.png' ?>"> 
+                        <div class="card-body">
+                            <center><h5 class="card-title mt-3 mb-2" ><b>Scopus For Student</b></h5></center>
+                            <p style="margin:5px;">membantu dalam mempersiapkan perangkat pendukung paper sebelum submit dan publish sampai indexing scopus.</p>
+                            <center><a href="#" class="btn btn-primary mb-2" style="color:white;">Pesan Sekarang!</a></center>
+                        </div>
+                </div>
+            </div>-->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="card courses_box mb-4">
+                    <img style="background-color:rgba(187, 120, 36, 0.1)" src="<?php echo base_url() . 'theme/images/logo/waktu.png' ?>"> 
+                        <div class="card-body">
+                            <center>
+                                <h5 class="card-title mt-3" ><b>Multi Entri Multi Exit (MeMe)</b></h5>
+                            </center>
+                            <hr size="6px" width="50%" align="center" color="orange">
+                            <p style="margin-left:15px;">memberikan layanan dalam penyusunan paper, dengan waktu yang fleksibel, dengan trainer yang profesional dan berpengalam.</p>
+                            <center>
+                                <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!%20Saya%20mau%20pesan%20program%20Multi%20Entri%20Multi%20Exit." class="btn btn-warning mb-3 mt-3" style="color:white; border-radius:30px; background-color:orange;">
+                                    Pesan Sekarang!
+                                </a>
+                            </center>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <?php endforeach;?>
+    </div>
+</section>
 <!--============================= END =============================-->
 
 <!--============================= AGENDA  & ARTIKEL =============================-->

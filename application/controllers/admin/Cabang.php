@@ -19,11 +19,12 @@ class Cabang extends CI_Controller
 	{
 		$x['kelas'] = $this->m_kelas->get_all_kelas();
 		$x['data'] = $this->m_cabang->get_all_siswa();
+		$x['title'] = 'Rumah Scopus | Cabang';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_cabang', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function simpan_siswa()

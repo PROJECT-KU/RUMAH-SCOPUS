@@ -8,7 +8,9 @@ class Login extends CI_Controller
     }
     function index()
     {
-        $this->load->view('admin/v_login');
+        $x['title'] = 'Rumah Scopus | Log In Admin';
+        $this->load->view('admin/v_login', $x);
+        $this->load->view('admin/template/head');
     }
     function auth()
     {

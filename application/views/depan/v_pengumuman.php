@@ -1,3 +1,6 @@
+<head>
+<title><?php echo $title; ?></title>
+</head>
 <!--============================= EVENTS =============================-->
 <section class="events">
     <div class="container">

@@ -18,11 +18,12 @@ class Invoice extends CI_Controller
         $kode = $this->session->userdata('idadmin');
         $x['user'] = $this->m_pengguna->get_pengguna_login($kode);
         $x['data'] = $this->db->get('tbl_bukti_pembayaran')->result_array();
+        $x['title'] = 'Rumah Scopus | Invoice';
         $this->load->view('admin/template/v_header');
         $this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_invoice', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
     }
     public function add_webinar()
     {

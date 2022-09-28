@@ -4,7 +4,7 @@
     <link rel="shortcut icon" href="favicon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rumah Scopus</title>
+    
     <link rel="shortcut icon" href="<?php echo base_url() . 'theme/images/logo/favicon.ico' ?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url() . 'theme/css/bootstrap.min.css' ?>">
@@ -208,9 +208,8 @@
 
 <!--============================= HOME =============================-->
    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rumah Scopus</title>
+   
+    
     <link rel="shorcut icon" href="<?php echo base_url() . 'theme/images/logo/favicon-32x32.png' ?>">
     </head>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" />

@@ -20,11 +20,12 @@ class Galeri extends CI_Controller
 
 		$x['data'] = $this->m_galeri->get_all_galeri();
 		$x['alb'] = $this->m_album->get_all_album();
+		$x['title'] = 'Rumah Scopus | Galeri';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_galeri', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function simpan_galeri()

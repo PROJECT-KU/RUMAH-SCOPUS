@@ -5,14 +5,7 @@ $query2 = $this->db->query("SELECT * FROM tbl_komentar WHERE komentar_status='0'
 $jum_comment = $query2->num_rows();
 $jum_pesan = $query->num_rows();
 ?>
-<?php
-  /* Mengambil query report*/
-  foreach ($visitor as $result) {
-    $bulan[] = $result->tgl; //ambil bulan
-    $value[] = (float) $result->jumlah; //ambil nilai
-  }
-  /* end mengambil query*/
-  ?>
+
 
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
@@ -97,14 +90,14 @@ $jum_pesan = $query->num_rows();
               </span>
             </a>
           </li>
-          <li>
+          <!--<li>
             <a href="<?php echo base_url() . 'admin/pengumuman' ?>">
               <i class="fa fa-volume-up"></i> <span>Pengumuman</span>
               <span class="pull-right-container">
                 <small class="label pull-right"></small>
               </span>
             </a>
-          </li>
+          </li>-->
           <li>
             <a href="<?php echo base_url() . 'admin/files' ?>">
               <i class="fa fa-download"></i> <span>Download</span>
@@ -137,18 +130,17 @@ $jum_pesan = $query->num_rows();
           </li>
 
           <li class="treeview">
-           <a href="#">
-             <i class="fa fa-user"></i>
-             <span>Cabang</span>
-             <span class="pull-right-container">
-               <i class="fa fa-angle-left pull-right"></i>
-             </span>
-           </a>
-           <ul class="treeview-menu">
-             <li><a href="<?php echo base_url() . 'admin/cabang' ?>"><i class="fa fa-users"></i> Data Cabang</a></li>
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>Cabang</span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url() . 'admin/cabang' ?>"><i class="fa fa-users"></i> Data Cabang</a></li>
               <!--<li><a href="#"><i class="fa fa-star-o"></i> Prestasi Siswa</a></li>-->
-
-           </ul>
+          </ul>
           </li>
 
           <li>

@@ -44,6 +44,7 @@ class Agenda extends CI_Controller
 		$this->pagination->initialize($config);
 		$x['page'] = $this->pagination->create_links();
 		$x['data'] = $this->m_agenda->agenda_perpage($offset, $limit);
+		$x['title'] = 'Rumah Scopus | Agenda';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_agenda', $x);

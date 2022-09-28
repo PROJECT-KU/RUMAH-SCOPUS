@@ -1,4 +1,6 @@
-<!--//END ABOUT IMAGE -->
+<head>
+<title><?php echo $title; ?></title>
+</head>
 <!--============================= WELCOME TITLE =============================-->
 <link rel="stylesheet" href="<?php echo base_url() . 'theme/css/fiturHome.css' ?>">
 

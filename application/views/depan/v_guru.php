@@ -1,3 +1,11 @@
+
+<!--============================= TITLE =============================-->
+<head>
+<title><?php echo $title; ?></title>
+</head>
+<!--============================= END =============================-->
+
+<!--============================= TRAINER =============================-->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Cambo&family=Roboto:wght@100&display=swap" />
 <style>
     h1 {
@@ -50,3 +58,4 @@
         <nav><?php echo $page; ?></nav>
     </div>
 </section>
+<!--============================= END =============================-->

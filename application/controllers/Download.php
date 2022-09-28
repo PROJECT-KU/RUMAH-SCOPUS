@@ -12,6 +12,7 @@ class Download extends CI_Controller
 	function index()
 	{
 		$x['data'] = $this->m_files->get_all_files();
+		$x['title'] = 'Rumah Scopus | Download Jurnal';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_download', $x);

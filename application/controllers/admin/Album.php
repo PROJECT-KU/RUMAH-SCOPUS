@@ -17,11 +17,12 @@ class Album extends CI_Controller
 	function index()
 	{
 		$x['data'] = $this->m_album->get_all_album();
+		$x['title'] = 'Rumah Scopus | Album Galeri';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_album', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function simpan_album()

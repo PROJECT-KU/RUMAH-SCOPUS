@@ -10,9 +10,10 @@ class Contact extends CI_Controller
   }
   function index()
   {
+    $x['title'] = 'Rumah Scopus | Kontak';
     $this->load->view('depan/template/navbar');
     $this->load->view('depan/template/head');
-    $this->load->view('depan/v_contact');
+    $this->load->view('depan/v_contact', $x);
     $this->load->view('depan/template/footer');
   }
 

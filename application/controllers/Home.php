@@ -21,6 +21,7 @@ class Home extends CI_Controller
 		$x['tot_siswa'] = $this->db->get('tbl_member')->num_rows();
 		$x['tot_files'] = $this->db->get('tbl_files')->num_rows();
 		$x['tot_agenda'] = $this->db->get('tbl_agenda')->num_rows();
+		$x['title'] = 'Rumah Scopus | Beranda';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_home', $x);

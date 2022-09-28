@@ -16,11 +16,12 @@ class Agenda extends CI_Controller
 	function index()
 	{
 		$x['data'] = $this->m_agenda->get_all_agenda();
+		$x['title'] = 'Rumah Scopus | Agenda';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_agenda', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function simpan_agenda()
@@ -32,7 +33,8 @@ class Agenda extends CI_Controller
 		$tempat = $this->input->post('xtempat');
 		$waktu = $this->input->post('xwaktu');
 		$keterangan = $this->input->post('xketerangan');
-		$this->m_agenda->simpan_agenda($nama_agenda, $deskripsi, $mulai, $selesai, $tempat, $waktu, $keterangan);
+		$foto = $this->input->file('xfoto');
+		$this->m_agenda->simpan_agenda($nama_agenda, $deskripsi, $mulai, $selesai, $tempat, $waktu, $keterangan,$foto);
 		echo $this->session->set_flashdata('msg', 'success');
 		redirect('admin/agenda');
 	}
@@ -47,7 +49,8 @@ class Agenda extends CI_Controller
 		$tempat = $this->input->post('xtempat');
 		$waktu = $this->input->post('xwaktu');
 		$keterangan = $this->input->post('xketerangan');
-		$this->m_agenda->update_agenda($kode, $nama_agenda, $deskripsi, $mulai, $selesai, $tempat, $waktu, $keterangan);
+		$foto = $this->input->file('xfoto');
+		$this->m_agenda->update_agenda($kode, $nama_agenda, $deskripsi, $mulai, $selesai, $tempat, $waktu, $keterangan,$foto);
 		echo $this->session->set_flashdata('msg', 'info');
 		redirect('admin/agenda');
 	}

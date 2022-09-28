@@ -18,11 +18,12 @@ class Pengguna extends CI_Controller
 		$kode = $this->session->userdata('idadmin');
 		$x['user'] = $this->m_pengguna->get_pengguna_login($kode);
 		$x['data'] = $this->m_pengguna->get_all_pengguna();
+		$x['title'] = 'Rumah Scopus | Pengguna';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_pengguna', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function simpan_pengguna()

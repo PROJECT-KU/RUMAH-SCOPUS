@@ -15,11 +15,12 @@ class Inbox extends CI_Controller
 	{
 		$this->m_kontak->update_status_kontak();
 		$x['data'] = $this->m_kontak->get_all_inbox();
+		$x['title'] = 'Rumah Scopus | Inbox';
 		$this->load->view('admin/template/v_header');
 		$this->load->view('admin/template/navbar');
 			$this->load->view('admin/template/head');
 			$this->load->view('admin/v_inbox', $x);
-			$this->load->view('admin/template/footer');
+			//$this->load->view('admin/template/footer');
 	}
 
 	function hapus_inbox()

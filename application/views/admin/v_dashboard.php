@@ -1,4 +1,4 @@
-<title>RSC | Dasboard</title>
+
 <?php
 error_reporting(0);
 $query = $this->db->query("SELECT * FROM tbl_inbox WHERE inbox_status='1'");
@@ -15,12 +15,18 @@ $jum_pesan = $query->num_rows();
   /* end mengambil query*/
   ?>
 
+<!--============================= TITLE =============================-->
+<head>
+<title><?php echo $title; ?></title>
+</head>
+<!--============================= END =============================-->
 
+<!--============================= CONTENT =============================-->
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
+
+    <!--============================= JUDUL PAGE =============================-->
       <section class="content-header">
         <h1>
           Dashboard
@@ -31,82 +37,108 @@ $jum_pesan = $query->num_rows();
           <li class="active">Dashboard</li>
         </ol>
       </section>
+    <!--============================= END =============================-->
 
-      <!-- Main content -->
+    <!--============================= PENGUNJUNG BROWSER =============================-->
       <section class="content">
-        <!-- Info boxes -->
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-aqua"><i class="fa fa-chrome"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Chrome'");
-              $jml = $query->num_rows();
-              ?>
-              <div class="info-box-content">
-                <span class="info-box-text">Chrome</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-red"><i class="fa fa-firefox"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Firefox' OR pengunjung_perangkat='Mozilla'");
-              $jml = $query->num_rows();
-              ?>
-              <div class="info-box-content">
-                <span class="info-box-text">Mozilla Firefox</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
+          
+              <!-- CHROME -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div  class="info-box bg-aqua">
+                    <span class="info-box-icon "><i style="margin-top:20px;" class="fa fa-chrome"></i></span>
+                    <?php
+                    $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Chrome'");
+                    $jml = $query->num_rows();
+                    ?>
+                    <div class="info-box-content">
+                      <span  class="info-box-text">Chrome</span>
+                      <span class="info-box-number"><?php echo $jml; ?></span>
 
-          <!-- fix for small devices only -->
-          <div class="clearfix visible-sm-block"></div>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                      </div>
+                      <span class="description">
+                        Pengunjung
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END -->
 
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-green"><i class="fa fa-bug"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Googlebot'");
-              $jml = $query->num_rows();
-              ?>
-              <div class="info-box-content">
-                <span class="info-box-text">Googlebot</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-yellow"><i class="fa fa-opera"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Opera'");
-              $jml = $query->num_rows();
-              ?>
-              <div class="info-box-content">
-                <span class="info-box-text">Opera</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
+                <!-- MOZILLA -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box bg-red">
+                    <span class="info-box-icon "><i style="margin-top:20px;" class="fa fa-firefox"></i></span>
+                    <?php
+                    $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Firefox' OR pengunjung_perangkat='Mozilla'");
+                    $jml = $query->num_rows();
+                    ?>
+                    <div class="info-box-content">
+                      <span class="info-box-text">Mozilla Firefox</span>
+                      <span class="info-box-number"><?php echo $jml; ?></span>
+                      
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                      </div>
+                      <span class="description">
+                        Pengunjung
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END -->
+
+                <!-- GOOGLE BOT -->
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box bg-green">
+                    <span class="info-box-icon "><i style="margin-top:20px;" class="fa fa-bug"></i></span>
+                    <?php
+                    $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Googlebot'");
+                    $jml = $query->num_rows();
+                    ?>
+                    <div class="info-box-content">
+                      <span class="info-box-text">Googlebot</span>
+                      <span class="info-box-number"><?php echo $jml; ?></span>
+                  
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                      </div>
+                      <span class="description">
+                        Pengunjung
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END -->
+
+                <!-- OPERA -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box bg-yellow">
+                    <span class="info-box-icon "><i style="margin-top:20px;" class="fa fa-opera"></i></span>
+                    <?php
+                    $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Opera'");
+                    $jml = $query->num_rows();
+                    ?>
+                    <div class="info-box-content">
+                      <span  class="info-box-text">Opera</span>
+                      <span class="info-box-number"><?php echo $jml; ?></span>
+                      
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                      </div>
+                      <span class="description">
+                        Pengunjung
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- END -->
         </div>
-        <!-- /.row -->
+    <!--============================= END PENGUNJUNG BROWSER =============================-->
 
+    <!--============================= PENGUNJUNG BULAN =============================-->
         <div class="row">
           <div class="col-md-12">
             <div class="box">
@@ -114,33 +146,21 @@ $jum_pesan = $query->num_rows();
                 <h3 class="box-title">Pengunjung bulan ini</h3>
 
               </div>
-              <!-- /.box-header -->
               <div class="box-body">
                 <div class="row">
                   <div class="col-md-12">
-
                     <div class="col-md-12">
                       <canvas id="canvas" width="1000" height="280"></canvas>
                     </div>
-                    <!-- /.chart-responsive -->
                   </div>
-                  <!-- /.col -->
-
-                  <!-- /.col -->
                 </div>
-                <!-- /.row -->
               </div>
-              <!-- ./box-body -->
-
-              <!-- /.box-footer -->
             </div>
-            <!-- /.box -->
           </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
+    <!--============================= END PENGUNJUNG BULAN =============================-->
 
-        <!-- Main row -->
+    <!--============================= POSTINGAN POPULER =============================-->
         <div class="row">
           <!-- Left col -->
           <div class="col-md-8">
@@ -164,19 +184,16 @@ $jum_pesan = $query->num_rows();
                   <?php endforeach; ?>
                 </table>
               </div>
-
-              <!-- /.box-body -->
             </div>
-            <!-- /.box -->
-
-            <!-- /.box -->
           </div>
-          <!-- /.col -->
+    <!--============================= END POSTINGAN POPULER =============================-->
 
-          <div class="col-md-4">
-            <!-- Info Boxes Style 2 -->
+    <!--============================= TOTAL PENGUNJUNG =============================-->
+        <div class="col-md-4">
+
+          <!-- SAFARI -->
             <div class="info-box bg-yellow">
-              <span class="info-box-icon"><i class="fa fa-safari"></i></span>
+              <span class="info-box-icon"><i style="margin-top:20px;" class="fa fa-safari"></i></span>
               <?php
               $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Safari'");
               $jml = $query->num_rows();
@@ -192,11 +209,12 @@ $jum_pesan = $query->num_rows();
                   Penggunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
+            <!-- END -->
+
+            <!-- LAINNYA -->
             <div class="info-box bg-green">
-              <span class="info-box-icon"><i class="fa fa-globe"></i></span>
+              <span class="info-box-icon"><i style="margin-top:20px;" class="fa fa-globe"></i></span>
               <?php
               $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Other' OR pengunjung_perangkat='Internet Explorer'");
               $jml = $query->num_rows();
@@ -212,11 +230,12 @@ $jum_pesan = $query->num_rows();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
+            <!-- END -->
+
+            <!-- PENGUNJUNG BULAN LALU -->
             <div class="info-box bg-red">
-              <span class="info-box-icon"><i class="fa fa-users"></i></span>
+              <span class="info-box-icon"><i style="margin-top:20px;" class="fa fa-users"></i></span>
               <?php
               $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH),'%m%y')");
               $jml = $query->num_rows();
@@ -232,11 +251,12 @@ $jum_pesan = $query->num_rows();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
+            <!-- END -->
+
+            <!-- PENGUNJUNG BULAN INI -->
             <div class="info-box bg-aqua">
-              <span class="info-box-icon"><i class="fa fa-users"></i></span>
+              <span class="info-box-icon"><i style="margin-top:20px;" class="fa fa-users"></i></span>
               <?php
               $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(CURDATE(),'%m%y')");
               $jml = $query->num_rows();
@@ -252,33 +272,17 @@ $jum_pesan = $query->num_rows();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-
-            <!-- PRODUCT LIST -->
-
-            <!-- /.box -->
-          </div>
-          <!-- /.col -->
+            <!-- END -->
         </div>
-        <!-- /.row -->
+    <!--============================= END TOTAL PENGUNJUNG =============================-->
+
+        </div>
       </section>
-      <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
+</body>
 
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-      </div>
-      <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="#">Rumah Scopus</a> </strong> All rights reserved
-    </footer>
-
-
-  </div>
-  <!-- ./wrapper -->
-
-  <!-- jQuery 2.2.3 -->
+<!--============================= JAVA SCRIPT =============================-->
   <script src="<?php echo base_url() . 'assets/plugins/jQuery/jquery-2.2.3.min.js' ?>"></script>
   <!-- Bootstrap 3.3.6 -->
   <script src="<?php echo base_url() . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
@@ -341,6 +345,6 @@ $jum_pesan = $query->num_rows();
       responsive: true
     });
   </script>
+<!--============================= END JAVA SCRIPT =============================-->
 
-</body>
 

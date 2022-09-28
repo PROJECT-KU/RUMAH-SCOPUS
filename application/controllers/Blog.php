@@ -46,6 +46,7 @@ class Blog extends CI_Controller
 		$x['data'] = $this->m_tulisan->berita_perpage($offset, $limit);
 		$x['category'] = $this->db->get('tbl_kategori');
 		$x['populer'] = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+		$x['title'] = 'Rumah Scopus | Artikel';
 		$this->load->view('depan/template/navbar');
 		$this->load->view('depan/template/head');
 		$this->load->view('depan/v_blog', $x);
@@ -73,6 +74,7 @@ class Blog extends CI_Controller
 			$x['show_komentar'] = $this->m_tulisan->show_komentar_by_tulisan_id($kode);
 			$x['category'] = $this->db->get('tbl_kategori');
 			$x['populer'] = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+			$x['title'] = 'Rumah Scopus | Detail Artikel';
 			$this->load->view('depan/template/navbar');
 			$this->load->view('depan/template/head');
 			$this->load->view('depan/v_blog_detail', $x);
@@ -90,6 +92,7 @@ class Blog extends CI_Controller
 			$x['data'] = $query;
 			$x['category'] = $this->db->get('tbl_kategori');
 			$x['populer'] = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+			$x['title'] = 'Rumah Scopus | ketegori Artikel';
 			$this->load->view('depan/template/navbar');
 			$this->load->view('depan/template/head');
 			$this->load->view('depan/v_blog', $x);
@@ -108,6 +111,7 @@ class Blog extends CI_Controller
 			$x['data'] = $query;
 			$x['category'] = $this->db->get('tbl_kategori');
 			$x['populer'] = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
+			$x['title'] = 'Rumah Scopus | Pencarian Artikel';
 			$this->load->view('depan/template/navbar');
 			$this->load->view('depan/template/head');
 			$this->load->view('depan/v_blog', $x);
