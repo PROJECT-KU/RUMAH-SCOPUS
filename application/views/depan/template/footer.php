@@ -65,7 +65,8 @@
                     <h3>Hubungi Kami</h3>
                     <p><span>Alamat: </span>Bangunsari, Bangunkerto, Turi, Sleman, Yogyakarta 55551</p>
                     <p>Email : info@rumahscopus.com
-                        <br> Phone : (+62) 812-2688-3280</p>
+                    <br> Phone :<br>  (+62) 812-2688-3280 ( admin 1 ) <br> (+62) 857-4781-0881 ( admin 2 )
+                    </p>
                     <ul class="footer-social-icons">
                         <li><a href="https://www.facebook.com/rumah.scopus.3"><i class="fa fa-facebook fa-fb" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UCRieEL0h0Zi4ju0t9zeU76g"><i class="fa fa-youtube fa-in" aria-hidden="true"></i></a></li>

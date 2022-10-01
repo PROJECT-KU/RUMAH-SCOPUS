@@ -12,6 +12,7 @@
             <div class="col-md-12">
                 <div class="contact-title">
                     <h2>Hubungi Kami</h2>
+                    <hr size="50%" width="30%" align="center" color="orange" style="margin-top: -15px;">
                 </div>
             </div>
         </div>
@@ -67,7 +68,25 @@
                                 <div class="contact-details">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                     <h6>Telepon dan WhatsApp</h6>
-                                    <p>(+62) 812-2688-32808</p>
+                                    <!--<a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!,%20Saya%20ingin%20informasi%20terkait%20program%20di%20Rumah%20Scopus." class="btn btn-warning mb-3 mt-3" style="color:white; border-radius:30px; background-color:orange;">
+                                    Pesan Sekarang!
+                                </a>-->
+                                    <p>
+                                        <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!,%20Saya%20ingin%20informasi%20terkait%20program%20di%20Rumah%20Scopus." style="color:white; border-radius:30px; margin-left:5px;">
+                                            <button  class="btn btn-info" type="submit" style="width: max-content;">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                        (+62) 812-2688-32808
+                                    </p>
+                                    <p>
+                                        <a href="https://api.whatsapp.com/send?phone=+6281226883280&text=Hallo%20kak!,%20Saya%20ingin%20informasi%20terkait%20program%20di%20Rumah%20Scopus." style="color:white; border-radius:30px; margin-left:8px;">
+                                            <button  class="btn btn-info" type="submit" style="width:max-content;">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                        (+62) 857-4781-0881
+                                    </p>
                                 </div>
                                 <!--<div class="contact-details" style="width: 100%; margin-right:10px;">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.340076630157!2d110.35291753646469!3d-7.646531319886422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5f6ce402cb15%3A0x6139423d4b76fbf8!2sRumah%20Scopus!5e0!3m2!1sid!2sid!4v1607779122453!5m2!1sid!2sid" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
